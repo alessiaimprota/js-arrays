@@ -2,6 +2,7 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
+
 const reversedTeachers = teachers.reverse();
 console.log(reversedTeachers);
 
@@ -10,10 +11,9 @@ console.log(reversedTeachers);
 const longNames = [];
 
 for (let i = 0; i < teachers.length; i++) {
-  let newName = teachers[i];
-  if (newName.length >= 5) {
+  if (teachers[i].length >= 5) {
     //console.log(newName)
-    longNames.push(newName);
+    longNames.push(teachers[i]);
   }
 }
 console.log(longNames);
@@ -39,4 +39,16 @@ console.log(isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 const teachersString = teachers.join();
-console.log(teachersString);
+
+
+
+//se i (indice di teachers) è minore di teacher.length scrivo `teachers[i], ` altrimenti scrivo se è uguale scrivo solo teachers[i]
+let teachersList = "";
+for (i = 0; i < teachers.length; i++) {
+  if (i < teachers.length-1) {
+    teachersList += `${teachers[i]}, `;
+  } else {
+    teachersList += teachers[i];
+  }
+}
+console.log(teachersList);
