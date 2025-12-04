@@ -3,7 +3,7 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
 
-const reversedTeachers = teachers.reverse();
+const reversedTeachers = teachers.toReversed();
 console.log(reversedTeachers);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
@@ -19,8 +19,7 @@ for (let i = 0; i < teachers.length; i++) {
 console.log(longNames)
 
 // 3. Rimuovi 'Ed' dall'array teachers
-//teachers.splice(1,1); ho dovuto rifarlo perché ora essendo in reverse ed ha cambiato posto
-teachers.splice(1, 2);
+teachers.splice(1,1);
 console.log(teachers)
 
 /* SE start<indice<itemstoremove non scrivere altrimenti scrivi teachers[i]
@@ -33,7 +32,7 @@ for (let i = 0; i < teachers.length; i++) {
   }
 }
 console.log(teachers2)
-funzionava sono riuscita a togliere due nomi perché per me era più chiaro provarne due e l'ho fatto per provare, ma non sono sicura se sia uscito bene o no*/
+funzionava sono riuscita a togliere due nomi perché per me era più chiaro provarne due e l'ho fatto per provare, ma non sono sicura se sia effettivamente fatto bene*/
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
