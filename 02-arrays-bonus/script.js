@@ -16,12 +16,24 @@ for (let i = 0; i < teachers.length; i++) {
     longNames.push(teachers[i]);
   }
 }
-console.log(longNames);
+console.log(longNames)
 
 // 3. Rimuovi 'Ed' dall'array teachers
 //teachers.splice(1,1); ho dovuto rifarlo perché ora essendo in reverse ed ha cambiato posto
-teachers.splice(5, 1);
-console.log(teachers);
+teachers.splice(1, 2);
+console.log(teachers)
+
+/* SE start<indice<itemstoremove non scrivere altrimenti scrivi teachers[i]
+const start = 1;
+const itemsToRemove = 2;
+const teachers2 = [];
+for (let i = 0; i < teachers.length; i++) {
+  if(!(i >= start && i < start+itemsToRemove)){
+    teachers2.push(teachers[i])
+  }
+}
+console.log(teachers2)
+funzionava sono riuscita a togliere due nomi perché per me era più chiaro provarne due e l'ho fatto per provare, ma non sono sicura se sia uscito bene o no*/
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
@@ -32,14 +44,14 @@ for (let i = 0; i < teachers.length; i++) {
     fabioPresent = true;
   }
 }
-console.log(fabioPresent);
+console.log(fabioPresent)
 
 const isFabioPresent = teachers.includes("Fabio");
-console.log(isFabioPresent);
+console.log(isFabioPresent)
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 const teachersString = teachers.join();
-
+console.log(teachersString)
 
 
 //se i (indice di teachers) è minore di teacher.length scrivo `teachers[i], ` altrimenti scrivo se è uguale scrivo solo teachers[i]
@@ -51,4 +63,4 @@ for (i = 0; i < teachers.length; i++) {
     teachersList += teachers[i];
   }
 }
-console.log(teachersList);
+console.log( teachersList);
